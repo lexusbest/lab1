@@ -26,6 +26,12 @@ public abstract class Pelikula implements Comparable<Pelikula>{
 		}
 	}
 	
+	public void kenduAktorea(Aktorea a){
+		if (this.lista.aktoreHauDu(a)){
+			this.lista.kenduAkt(a);
+		}
+	}
+	
 	
 	
 

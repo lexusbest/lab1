@@ -31,5 +31,8 @@ public class ListaAktoreak {
 	public void gehituAkt(Aktorea a) {
 		this.lista.add(a);	
 	}
+	public void kenduAkt(Aktorea a){
+		this.lista.remove(a);
+	}
 
 }

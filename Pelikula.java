@@ -32,7 +32,8 @@ public abstract class Pelikula implements Comparable<Pelikula>{
 		}
 	}
 	
-	
-	
+	public ListaAktoreak aktoreakBueltatu() {
+		return this.lista;
+	}
 
 }

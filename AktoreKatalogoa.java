@@ -3,11 +3,11 @@ package lab1;
 import java.util.*;
 
 public class AktoreKatalogoa {
-	private ListaAktoreak lista;
+	private HashMap lista;
 	private static AktoreKatalogoa nireAktoreKatalogoa;
 	
 	private AktoreKatalogoa(){
-		this.lista=new ListaAktoreak();
+		this.lista=new HashMap<String,Aktorea>();
 	}
 	
 	public static AktoreKatalogoa getNireAktoreKatalogoa(){
@@ -17,6 +17,20 @@ public class AktoreKatalogoa {
 		  return nireAktoreKatalogoa;
 		  
 		 }
+	
+	public Aktorea aktoreaBilatu(String pIzen){
+		Aktorea aktore1=null;
+		if (this.lista.containsKey(pIzen)){
+			aktore1=(Aktorea)this.lista.get(pIzen);
+		}
+		return aktore1;
+	}
+	
+	public void aktoreaTxertatu(Aktorea a){
+		if (!this.lista.containsKey(a.getIzena())){
+			this.lista.put(a.getIzena(),a);
+		}
+	}
 	
 	public void quickSort(Aktorea[] taula){
 		quickSort(taula,0,taula.length-1);

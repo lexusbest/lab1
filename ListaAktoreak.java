@@ -27,6 +27,16 @@ public class ListaAktoreak {
 		  }
 		return baDago;
 	}
+	
+	public void aktoreakBueltatu() {
+		Aktorea aktore1=null;
+		Iterator<Aktorea>itr;
+		itr=this.getIteradorea();
+		while(itr.hasNext()){
+			aktore1=itr.next();
+			System.out.println(aktore1.getIzena());
+		}
+	}
 
 	public void gehituAkt(Aktorea a) {
 		this.lista.add(a);	

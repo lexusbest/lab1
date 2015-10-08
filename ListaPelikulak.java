@@ -33,4 +33,14 @@ public class ListaPelikulak {
 		
 	}
 
+	public void pelikulakBueltatu() {
+		Pelikula pelikula1=null;
+		Iterator<Pelikula>itr;
+		itr=this.getIteradorea();
+		while(itr.hasNext()){
+			pelikula1=itr.next();
+			System.out.println(pelikula1.getIzenburua());
+		}
+	}
+
 }

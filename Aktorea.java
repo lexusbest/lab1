@@ -26,8 +26,12 @@ public abstract class Aktorea implements Comparable<Aktorea> {
 		}
 	}
 	
-	public ListaPelikulak pelikulakBueltatu() {
-		return this.lista;
+	public void pelikulakBueltatu() {
+		this.lista.pelikulakBueltatu();
+	}
+
+	public String getIzena() {
+		return this.izena;
 	}
 
 }

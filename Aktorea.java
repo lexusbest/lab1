@@ -25,5 +25,9 @@ public abstract class Aktorea implements Comparable<Aktorea> {
 			this.lista.gehituPel(p);
 		}
 	}
+	
+	public ListaPelikulak pelikulakBueltatu() {
+		return this.lista;
+	}
 
 }

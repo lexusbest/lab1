@@ -1,6 +1,6 @@
 package lab1;
 
-public abstract class Pelikula implements Comparable<Pelikula>{
+public class Pelikula implements Comparable<Pelikula>{
 	private String izenburua;
 	private ListaAktoreak lista;
 	
@@ -11,6 +11,13 @@ public abstract class Pelikula implements Comparable<Pelikula>{
 	
 	public boolean equals(Pelikula p){
 		if (this.izenburua.equals(p.izenburua)){
+			return true;
+		}
+		else{ return false;}
+	}
+	
+	public boolean equals2(String pIzenb){
+		if (this.izenburua.equals(pIzenb)){
 			return true;
 		}
 		else{ return false;}

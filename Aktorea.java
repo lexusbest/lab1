@@ -1,6 +1,6 @@
 package lab1;
 
-public abstract class Aktorea implements Comparable<Aktorea> {
+public class Aktorea implements Comparable<Aktorea> {
 	private String izena;
 	private ListaPelikulak lista;
 	

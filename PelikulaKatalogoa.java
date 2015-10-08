@@ -18,9 +18,15 @@ public class PelikulaKatalogoa {
 		 }
 	
 	public void pelikulaTxertatu(Pelikula p){
-		if (!this.lista.containsKey(p.getIzenburua())){
 			this.lista.put(p.getIzenburua(),p);
-		}
+	}
+	
+	public boolean pelikulaDago(String pIzenb){
+		return this.lista.containsKey(pIzenb);
+	}
+	
+	public Pelikula bilatuPelikula(String pIzenb){
+		return (Pelikula)this.lista.get(pIzenb);
 	}
 	
 	

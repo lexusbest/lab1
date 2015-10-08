@@ -58,8 +58,9 @@ public class AktoreKatalogoa {
 		taula[i]=taula[eskuin];
 		taula[eskuin]=lag;
 		return eskuin;
-		}
+	}
 	
+
 }
 
 

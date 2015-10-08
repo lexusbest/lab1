@@ -42,5 +42,20 @@ public class ListaPelikulak {
 			System.out.println(pelikula1.getIzenburua());
 		}
 	}
+	
+	public Pelikula bilatuPelikula(String pIzenb){
+		boolean atera=false;
+		Pelikula pelikula1=null;
+		Iterator<Pelikula>itr;
+		itr=this.getIteradorea();
+		while(itr.hasNext()&&!atera){
+			pelikula1=itr.next();
+			if(pelikula1.equals2(pIzenb)){
+				atera=true;
+			}
+		}
+		return pelikula1;
+		
+	}
 
 }

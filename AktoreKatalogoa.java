@@ -32,7 +32,13 @@ public class AktoreKatalogoa {
 		}
 	}
 	
-	public void quickSort(Aktorea[] taula){
+	public Aktorea[] ordenatu(){
+		Aktorea[] taula=(Aktorea[])this.lista.values().toArray();
+		this.quickSort(taula);
+		return taula;
+	}
+	
+	private void quickSort(Aktorea[] taula){
 		quickSort(taula,0,taula.length-1);
 	}
 	
@@ -60,7 +66,24 @@ public class AktoreKatalogoa {
 		return eskuin;
 	}
 	
-
+	private void swap(Aktorea[] taula, int ezker, int eskuin){
+		Aktorea a=taula[ezker];
+		taula[ezker]=taula[eskuin];
+		taula[eskuin]=a;
+	}
+	
+	public void ezabatuAktKatalogotik(String izena){
+		this.lista.remove(izena);
+	}
+	
+	public void inprimatu(Aktorea[] taula){ //Ordenatu metodoa probatzeko
+		int i=0;
+		while (i<taula.length){
+			System.out.println(taula[i].getIzena());
+			i++;
+		}
+	}
+		
 }
 
 

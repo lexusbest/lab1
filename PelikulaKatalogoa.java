@@ -29,6 +29,11 @@ public class PelikulaKatalogoa {
 		return (Pelikula)this.lista.get(pIzenb);
 	}
 	
+	public void diruaGehitu(String izenb, int dirua){
+		Pelikula p=bilatuPelikula(izenb);
+		p.diruaGehitu(dirua);
+	}
+	
 	
 
 }

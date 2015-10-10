@@ -3,9 +3,11 @@ package lab1;
 public class Pelikula implements Comparable<Pelikula>{
 	private String izenburua;
 	private ListaAktoreak lista;
+	private int dirua;
 	
 	public Pelikula(String pIzenburua){
 		this.izenburua=pIzenburua;
+		this.dirua=0;
 		this.lista=new ListaAktoreak();
 	}
 	
@@ -45,6 +47,10 @@ public class Pelikula implements Comparable<Pelikula>{
 
 	public String getIzenburua() {
 		return this.izenburua;
+	}
+
+	public void diruaGehitu(int dirua) {
+		this.dirua=this.dirua+dirua;
 	}
 
 }

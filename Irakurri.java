@@ -3,6 +3,8 @@ package lab1;
 import java.util.*;
 import java.io.*;
 
+import javax.swing.JOptionPane;
+
 public class Irakurri {
 	
 	public Irakurri(){	
@@ -40,6 +42,23 @@ public class Irakurri {
 			 sarrera.close();
 			 }
 			 catch(IOException e) {e.printStackTrace();}
+	}
+	
+	public static void aktoreFitxSortu(String[] args) throws IOException{
+		File fitxIzena=new File("Aktoreak.txt");
+		Aktorea[] taula=AktoreKatalogoa.getNireAktoreKatalogoa().taulaSortuOrdenatuGabe();
+		try{
+			FileWriter fw=new FileWriter(fitxIzena);
+			Writer output=new BufferedWriter(fw);
+			int sz=taula.length;
+			for (int i=0; i<sz; i++){
+				output.write(taula[i] + "\n");
+			}
+			output.close();
+		}
+		catch(Exception e) {
+			JOptionPane.showMessageDialog(null, "ezin da fitxategia sortu");
+		}
 	}
 
 }

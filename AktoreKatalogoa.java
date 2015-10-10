@@ -38,6 +38,11 @@ public class AktoreKatalogoa {
 		return taula;
 	}
 	
+	public Aktorea[] taulaSortuOrdenatuGabe(){
+		Aktorea[] taula=(Aktorea[])this.lista.values().toArray();
+		return taula;
+	}
+	
 	private void quickSort(Aktorea[] taula){
 		quickSort(taula,0,taula.length-1);
 	}

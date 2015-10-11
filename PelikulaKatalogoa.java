@@ -30,8 +30,10 @@ public class PelikulaKatalogoa {
 	}
 	
 	public void diruaGehitu(String izenb, int dirua){
-		Pelikula p=bilatuPelikula(izenb);
-		p.diruaGehitu(dirua);
+		Pelikula p=this.bilatuPelikula(izenb);
+		if (p!=null){
+			p.diruaGehitu(dirua);
+		}
 	}
 	
 	public void erreseteatu(){

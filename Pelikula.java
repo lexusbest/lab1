@@ -11,6 +11,10 @@ public class Pelikula implements Comparable<Pelikula>{
 		this.lista=new ListaAktoreak();
 	}
 	
+	public int getDirua(){
+		return this.dirua;
+	}
+	
 	public boolean equals(Pelikula p){
 		if (this.izenburua.equals(p.izenburua)){
 			return true;

@@ -26,6 +26,10 @@ public class AktoreKatalogoa {
 		return aktore1;
 	}
 	
+	public boolean AktoreaDago(String pIzen){
+		return this.lista.containsKey(pIzen);
+	}
+	
 	public void aktoreaTxertatu(Aktorea a){
 		if (!this.lista.containsKey(a.getIzena())){
 			this.lista.put(a.getIzena(),a);

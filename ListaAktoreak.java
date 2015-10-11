@@ -45,4 +45,9 @@ public class ListaAktoreak {
 		this.lista.remove(a);
 	}
 
+	public Aktorea[] arrayaSortu() {
+		Aktorea[] array = this.lista.toArray(new Aktorea[this.lista.size()]);
+		return array;
+	}
+
 }

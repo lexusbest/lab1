@@ -3,11 +3,13 @@ package lab1;
 import java.util.*;
 
 public class AktoreKatalogoa {
+	private ListaAktoreak arrayLista;
 	private HashMap<String,Aktorea> lista;
 	private static AktoreKatalogoa nireAktoreKatalogoa;
 	
 	private AktoreKatalogoa(){
 		this.lista=new HashMap<String,Aktorea>();
+		this.arrayLista= new ListaAktoreak();
 	}
 	
 	public static AktoreKatalogoa getNireAktoreKatalogoa(){
@@ -33,17 +35,18 @@ public class AktoreKatalogoa {
 	public void aktoreaTxertatu(Aktorea a){
 		if (!this.lista.containsKey(a.getIzena())){
 			this.lista.put(a.getIzena(),a);
+			this.arrayLista.gehituAkt(a);
 		}
 	}
 	
 	public Aktorea[] ordenatu(){
-		Aktorea[] taula=(Aktorea[])this.lista.values().toArray();
+		Aktorea[] taula=this.arrayLista.arrayaSortu();
 		this.quickSort(taula);
 		return taula;
 	}
 	
 	public Aktorea[] taulaSortuOrdenatuGabe(){
-		Aktorea[] taula=(Aktorea[])this.lista.values().toArray();
+		Aktorea[] taula=this.arrayLista.arrayaSortu();
 		return taula;
 	}
 	
@@ -82,7 +85,9 @@ public class AktoreKatalogoa {
 	}
 	
 	public void ezabatuAktKatalogotik(String izena){
+		Aktorea a=this.lista.get(izena);
 		this.lista.remove(izena);
+		this.arrayLista.kenduAkt(a);
 	}
 	
 	public void inprimatu(Aktorea[] taula){ //Ordenatu metodoa probatzeko

@@ -3,7 +3,7 @@ package lab1;
 import java.util.*;
 
 public class PelikulaKatalogoa {
-	private HashMap lista;
+	private HashMap<String,Pelikula> lista;
 	private static PelikulaKatalogoa nirePelikulaKatalogoa;
 	
 	private PelikulaKatalogoa(){

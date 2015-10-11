@@ -51,14 +51,14 @@ public class AktoreKatalogoa {
 	}
 	
 	private void quickSort(Aktorea[] taula){
-		quickSort(taula,0,taula.length-1);
+		quickSort(taula, 0, taula.length - 1);
 	}
 	
 	private void quickSort(Aktorea[] taulaBat,int hasiera,int bukaera){
 		if (bukaera-hasiera>0){
 			int indizeaZatiketa=zatiketa(taulaBat,hasiera,bukaera);
 			quickSort(taulaBat,hasiera,indizeaZatiketa-1);
-			quickSort(taulaBat,indizeaZatiketa-1,bukaera);
+			quickSort(taulaBat,indizeaZatiketa+1,bukaera);
 		}
 	}
 	private int zatiketa(Aktorea[] taula,int i,int f){

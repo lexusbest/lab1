@@ -34,6 +34,11 @@ public class PelikulaKatalogoa {
 		p.diruaGehitu(dirua);
 	}
 	
+	public void erreseteatu(){
+		this.lista.clear();
+		PelikulaKatalogoa.nirePelikulaKatalogoa=null;
+	}
+	
 	
 
 }

@@ -54,6 +54,9 @@ public class ListaPelikulak {
 				atera=true;
 			}
 		}
+		if (!atera){
+			pelikula1=null;
+		}
 		return pelikula1;
 		
 	}

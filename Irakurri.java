@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 
 public class Irakurri {
 	
+	
 	public Irakurri(){	
 		
 	}

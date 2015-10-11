@@ -88,7 +88,12 @@ public class AktoreKatalogoa {
 			i++;
 		}
 	}
-		
+	
+	public void erreseteatu(){
+		this.lista.clear();
+		AktoreKatalogoa.nireAktoreKatalogoa=null;
+	}
+	
 }
 
 

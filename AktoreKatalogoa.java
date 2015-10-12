@@ -20,6 +20,10 @@ public class AktoreKatalogoa {
 		  
 		 }
 	
+	public String[] AktoreenIzenenLista(){
+		return this.lista.keySet().toArray(new String[this.lista.size()]);
+	}
+	
 	public Aktorea aktoreaBilatu(String pIzen){
 		Aktorea aktore1=null;
 		if (this.lista.containsKey(pIzen)){

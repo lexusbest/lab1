@@ -25,7 +25,6 @@ public class Irakurri {
 				 String[] hitzak=lerroa.split(" ### ");
 				 aktore= new Aktorea(hitzak[i]);
 				 AktoreKatalogoa.getNireAktoreKatalogoa().aktoreaTxertatu(aktore);
-				 i++;
 				 while(i<hitzak.length){
 					 if (!PelikulaKatalogoa.getNirePelikulaKatalogoa().pelikulaDago(hitzak[i])){
 						 peli= new Pelikula(hitzak[i]);
@@ -39,21 +38,22 @@ public class Irakurri {
 					 peli.gehituAktorea(aktore);
 					 i++;
 				 }
+				 i++;
 			 }
 			 sarrera.close();
 			 }
 			 catch(IOException e) {e.printStackTrace();}
 	}
 	
-	public static void aktoreFitxSortu(String[] args) throws IOException{
+	public static void aktoreFitxSortu(String[] taula) throws IOException{
 		File fitxIzena=new File("Aktoreak.txt");
-		Aktorea[] taula=AktoreKatalogoa.getNireAktoreKatalogoa().taulaSortuOrdenatuGabe();
 		try{
 			FileWriter fw=new FileWriter(fitxIzena);
-			Writer output=new BufferedWriter(fw);
+			BufferedWriter output=new BufferedWriter(fw);
 			int sz=taula.length;
 			for (int i=0; i<sz; i++){
-				output.write(taula[i] + "\n");
+				output.write(taula[i]);
+				output.newLine();
 			}
 			output.close();
 		}

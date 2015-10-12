@@ -25,6 +25,7 @@ public class Irakurri {
 				 String[] hitzak=lerroa.split(" ### ");
 				 aktore= new Aktorea(hitzak[i]);
 				 AktoreKatalogoa.getNireAktoreKatalogoa().aktoreaTxertatu(aktore);
+				 i++;
 				 while(i<hitzak.length){
 					 if (!PelikulaKatalogoa.getNirePelikulaKatalogoa().pelikulaDago(hitzak[i])){
 						 peli= new Pelikula(hitzak[i]);
@@ -38,7 +39,6 @@ public class Irakurri {
 					 peli.gehituAktorea(aktore);
 					 i++;
 				 }
-				 i++;
 			 }
 			 sarrera.close();
 			 }

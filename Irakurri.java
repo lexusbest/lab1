@@ -15,6 +15,7 @@ public class Irakurri {
 	public void kargatu(String fitx)throws Exception{
 		Aktorea aktore=null;
 		int i;
+		int x = 0;
 		Pelikula peli=null;
 		try{
 			 Scanner sarrera = new Scanner(new FileReader(fitx));
@@ -39,6 +40,7 @@ public class Irakurri {
 					 peli.gehituAktorea(aktore);
 					 i++;
 				 }
+				 System.out.println(x++);
 			 }
 			 sarrera.close();
 			 }

@@ -24,20 +24,20 @@ public class IrakurriTest {
 	public void testKargatu() {
 		i = new Irakurri();
 		try{
-			i.kargatu("D:\\lanlekua\\DEA\\src\\lab1\\actors-small.txt");
+			i.kargatu("C://Users/Iker/Desktop/Program/DEA/src/lab1/aaa.txt");//Hau ALDATU ordenagailuaren arabera
 		} catch (Exception e){
 			System.out.println(e.getMessage());
 		}
-		assertTrue(AktoreKatalogoa.getNireAktoreKatalogoa().AktoreaDago("﻿Kotsifakis, Hector"));//lehenengo aktorean 3 simbolo agertzen dira hasieran
+		assertTrue(AktoreKatalogoa.getNireAktoreKatalogoa().AktoreaDago("Kotsifakis, Hector"));//lehenengo aktorean 3 simbolo agertzen dira hasieran
 		assertTrue(AktoreKatalogoa.getNireAktoreKatalogoa().AktoreaDago("Aaberge, Tone Damli"));
 		assertTrue(AktoreKatalogoa.getNireAktoreKatalogoa().AktoreaDago("Holub, Carla"));
 		assertTrue(PelikulaKatalogoa.getNirePelikulaKatalogoa().pelikulaDago("Me gusta cuando callas"));
 		assertTrue(PelikulaKatalogoa.getNirePelikulaKatalogoa().pelikulaDago("Daniel & Ana"));
 		assertTrue(PelikulaKatalogoa.getNirePelikulaKatalogoa().pelikulaDago("Seven Mummies"));
-		aktoreKat.inprimatu(aktoreKat.taulaSortuOrdenatuGabe());
+		//aktoreKat.inprimatu(aktoreKat.taulaSortuOrdenatuGabe());
 	}
 	
-	@Test
+	
 	public void testAktoreFitxSortu(){
 		i = new Irakurri();
 		try{

@@ -47,4 +47,15 @@ public class IrakurriTest {
 			System.out.println(e.getMessage());
 		}
 	}
+	@Test
+	public void testOrdenatu(){
+		i = new Irakurri();
+		try{
+			i.kargatu("C://Users/Iker/Desktop/Program/DEA/src/lab1/aaa.txt");//Hau ALDATU ordenagailuaren arabera
+		} catch (Exception e){
+			System.out.println(e.getMessage());
+		}
+		Aktorea[] lista = aktoreKat.ordenatu();
+		//aktoreKat.inprimatu(lista);
+	}
 }

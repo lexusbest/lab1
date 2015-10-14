@@ -37,7 +37,7 @@ public class IrakurriTest {
 		//aktoreKat.inprimatu(aktoreKat.taulaSortuOrdenatuGabe());
 	}
 	
-	
+	@Test
 	public void testAktoreFitxSortu(){
 		i = new Irakurri();
 		try{

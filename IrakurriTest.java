@@ -28,15 +28,15 @@ public class IrakurriTest {
 		} catch (Exception e){
 			System.out.println(e.getMessage());
 		}
-		assertTrue(AktoreKatalogoa.getNireAktoreKatalogoa().AktoreaDago("Kotsifakis, Hector"));//lehenengo aktorean 3 simbolo agertzen dira hasieran
+		/*assertTrue(AktoreKatalogoa.getNireAktoreKatalogoa().AktoreaDago("Kotsifakis, Hector"));//lehenengo aktorean 3 simbolo agertzen dira hasieran
 		assertTrue(AktoreKatalogoa.getNireAktoreKatalogoa().AktoreaDago("Aaberge, Tone Damli"));
 		assertTrue(AktoreKatalogoa.getNireAktoreKatalogoa().AktoreaDago("Holub, Carla"));
 		assertTrue(PelikulaKatalogoa.getNirePelikulaKatalogoa().pelikulaDago("Me gusta cuando callas"));
 		assertTrue(PelikulaKatalogoa.getNirePelikulaKatalogoa().pelikulaDago("Daniel & Ana"));
-		assertTrue(PelikulaKatalogoa.getNirePelikulaKatalogoa().pelikulaDago("Seven Mummies"));
-		//aktoreKat.inprimatu(aktoreKat.taulaSortuOrdenatuGabe());
+		assertTrue(PelikulaKatalogoa.getNirePelikulaKatalogoa().pelikulaDago("Seven Mummies"));*/
+		aktoreKat.inprimatu(aktoreKat.taulaSortuOrdenatuGabe());
 	}
-	
+	/*
 	@Test
 	public void testAktoreFitxSortu(){
 		i = new Irakurri();
@@ -57,5 +57,5 @@ public class IrakurriTest {
 		}
 		Aktorea[] lista = aktoreKat.ordenatu();
 		//aktoreKat.inprimatu(lista);
-	}
+	} */
 }
